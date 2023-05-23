@@ -2,11 +2,11 @@
 # git clone https://github.com/purefield/opc-virt.git ~/demo
 if [ "x$subscriptionOrg" == "x" ]
 then
-   read -p "What is your subscription org used to register RHEL? " subscriptionOrg
+   read -p "What is your rhel account username? " subscriptionOrg
 fi
 if [ "x$subscriptionKey" == "x" ]
 then
-   read -p "What is your subscription key? " subscriptionKey
+   read -p "What is your subscription password? " subscriptionKey
 fi
 sudo dnf install -y python3-certbot-apache
 ssh-keygen -N ""  -f ~/demo/demo.id_rsa
